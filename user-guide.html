@@ -65,7 +65,7 @@
 
 <nav class="sidebar">
   <div class="brand">RetireSmart</div>
-  <div class="version">Complete User Guide · v1.4</div>
+  <div class="version">Complete User Guide · v1.5</div>
   <h2>Getting Started</h2>
   <a href="#overview">App Overview</a>
   <a href="#onboarding">First Launch</a>
@@ -87,7 +87,10 @@
   <a href="#goal-tab">Goal Planner</a>
   <a href="#forecast-tab">Forecast (Monte Carlo)</a>
   <a href="#drawdown-tab">Retirement Drawdown</a>
+  <a href="#progress-ring">Goal Progress Ring</a>
+  <a href="#extra-goals">Extra Goals</a>
   <a href="#notifications">DCA Reminders</a>
+  <a href="#weekly-notif">Weekly Net Worth Alert</a>
   <a href="#streak">Investment Streak</a>
   <h2>Family Profiles</h2>
   <a href="#family-overview">Family Overview</a>
@@ -135,11 +138,14 @@
   </table>
 
   <!-- FIRST LAUNCH -->
-  <h2 id="onboarding">First Launch &amp; Sign In</h2>
-  <p>When you first open RetireSmart, you'll see an onboarding walkthrough explaining the key features. After that, you'll be asked to sign in.</p>
-  <div class="step"><span class="step-num">1</span><strong>Sign in</strong> — Enter your name and email address. No password required. RetireSmart uses a simple local sign-in; your credentials stay on your device.</div>
-  <div class="step"><span class="step-num">2</span><strong>Holdings Tab opens</strong> — You'll land on the Holdings screen with a sample SPY holding. This is just a placeholder — tap it to add your real share count.</div>
-  <div class="step"><span class="step-num">3</span><strong>Add your first real holding</strong> — Tap <strong>+ Add Holding</strong> and search for any stock or ETF by ticker symbol.</div>
+  <h2 id="onboarding">First Launch &amp; Onboarding</h2>
+  <p>The first time you open RetireSmart, you'll see an interactive 3-step setup that helps you get started quickly.</p>
+  <div class="step"><span class="step-num">1</span><strong>Set your retirement goal</strong> — Type your target number (e.g. $1,000,000). The app shows you the equivalent annual income this generates using the 4% rule. You can change this any time in the Planner tab.</div>
+  <div class="step"><span class="step-num">2</span><strong>Stress-test preview</strong> — See how the Monte Carlo Forecast works — we run 1,000 simulations to show your real odds of reaching the goal.</div>
+  <div class="step"><span class="step-num">3</span><strong>Family features</strong> — Learn about multi-profile family tracking, then tap <strong>Get Started</strong>.</div>
+  <div class="step"><span class="step-num">4</span><strong>Sign in</strong> — Enter your name and email. No password required. Your main profile data syncs securely to the cloud.</div>
+  <div class="step"><span class="step-num">5</span><strong>Add your first holding</strong> — Tap <strong>+ Add Holding</strong> and search for any stock or ETF by ticker symbol.</div>
+  <div class="tip"><p>💡 The retirement goal you set during onboarding is automatically applied when you sign in — you don't need to re-enter it.</p></div>
 
   <!-- NAVIGATION -->
   <h2 id="navigation">Navigation</h2>
@@ -465,6 +471,28 @@
     <li><strong>Monthly DCA gap</strong> — how much more you need to invest each month to hit the goal (shown as a red/green card)</li>
   </ul>
 
+  <!-- PROGRESS RING -->
+  <h2 id="progress-ring">Goal Progress Ring</h2>
+  <p>When your portfolio has a value, a circular <strong>Goal Progress Ring</strong> appears at the top of the Goal tab. It shows at a glance how funded your retirement goal is.</p>
+  <ul>
+    <li><strong>Green (75%+)</strong> — excellent progress, you are well on track</li>
+    <li><strong>Orange (40–74%)</strong> — good progress, keep investing consistently</li>
+    <li><strong>Red (&lt;40%)</strong> — gap to close, check your monthly DCA target</li>
+  </ul>
+  <p>Below the ring you can see the exact dollar amount you have saved and how much is still needed.</p>
+
+  <!-- EXTRA GOALS -->
+  <h2 id="extra-goals">Extra Goals (House, Education &amp; More)</h2>
+  <p>In addition to your retirement goal, you can track any number of separate savings goals — buying a home, education savings, building an emergency fund, a holiday, and more.</p>
+  <h3>Adding an Extra Goal</h3>
+  <div class="step"><span class="step-num">1</span>Go to <strong>Planner</strong> tab → scroll to <strong>OTHER GOALS</strong> section.</div>
+  <div class="step"><span class="step-num">2</span>Tap one of the quick suggestions (House, Education, Emergency Fund) or tap <strong>+ Add Goal</strong>.</div>
+  <div class="step"><span class="step-num">3</span>Choose an emoji, enter a name, set the target amount, and enter how much you've already saved toward it.</div>
+  <div class="step"><span class="step-num">4</span>Tap <strong>Save</strong>. The goal appears as a progress bar showing % achieved.</div>
+  <h3>Editing an Extra Goal</h3>
+  <p>Tap any goal in the OTHER GOALS list to edit it — update the saved amount as you progress, rename it, or delete it.</p>
+  <div class="tip"><p>💡 Extra goals are stored locally on your device. They do not affect your retirement projection — they are purely for tracking progress toward other financial milestones.</p></div>
+
   <!-- FORECAST -->
   <h2 id="forecast-tab">Forecast — Monte Carlo Simulation <span class="badge pro">Pro / Family</span></h2>
   <p>Monte Carlo simulation runs 1,000 random market scenarios using the historical volatility and return of your actual holdings. It shows you the <em>range</em> of possible outcomes — not just one average number.</p>
@@ -510,6 +538,20 @@
   <div class="step"><span class="step-num">3</span>Grant notification permission when prompted.</div>
   <div class="step"><span class="step-num">4</span>Tap the day number you want to receive the reminder each month (e.g. tap <strong>1</strong> for the 1st of every month).</div>
   <p>The reminder fires at 9:00 AM on your chosen day every month. Toggle it off to cancel.</p>
+
+  <!-- WEEKLY NET WORTH NOTIFICATION -->
+  <h2 id="weekly-notif">Weekly Net Worth Alert</h2>
+  <p>Stay informed with a weekly push notification every <strong>Sunday at 9:00 AM</strong> showing your net worth and whether it went up or down since last week.</p>
+  <div class="step"><span class="step-num">1</span>Go to <strong>Planner</strong> tab → scroll to <strong>NOTIFICATIONS</strong> section (inside Advanced Settings).</div>
+  <div class="step"><span class="step-num">2</span>Toggle on <strong>Weekly Net Worth Update</strong>.</div>
+  <div class="step"><span class="step-num">3</span>Grant notification permission when prompted.</div>
+  <p>The notification text adapts to your situation:</p>
+  <ul>
+    <li><strong>If your net worth grew:</strong> shows the percentage gain with a 📈 — e.g. "Your net worth grew 2.4% this week 📈 — now at $248K."</li>
+    <li><strong>If your net worth dropped:</strong> shows the current absolute value with an encouraging message — e.g. "Markets moved this week — your net worth is $242K. Stay the course 💪"</li>
+    <li><strong>If no history yet:</strong> reminds you to add your holdings so tracking can begin.</li>
+  </ul>
+  <div class="tip"><p>💡 The notification message is calculated when you first enable the toggle. To get an updated message, toggle it off and back on after your portfolio has had a chance to refresh.</p></div>
 
   <!-- STREAK -->
   <h2 id="streak">Investment Streak</h2>
@@ -679,3 +721,6 @@
 </div>
 </body>
 </html>
+
+
+
