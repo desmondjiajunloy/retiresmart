@@ -64,7 +64,7 @@
 
 <nav class="sidebar">
   <div class="brand">RetireSmart</div>
-  <div class="version">Complete User Guide · v1.5</div>
+  <div class="version">Complete User Guide · v1.6</div>
   <h2>Getting Started</h2>
   <a href="#overview">App Overview</a>
   <a href="#onboarding">First Launch</a>
@@ -94,6 +94,7 @@
   <a href="#add-member">Adding Members</a>
   <a href="#switching">Switching Profiles</a>
   <a href="#child-profile">Child Profiles</a>
+  <a href="#graduate-adult">Graduate to Adult</a>
   <h2>Settings & Account</h2>
   <a href="#settings">Settings Screen</a>
   <a href="#theme">Dark / Light Mode</a>
@@ -149,11 +150,12 @@
     <tr><td><span class="screen-label">Planner</span></td><td>Retirement goal, Monte Carlo forecast, drawdown analysis, and net worth history graph</td></tr>
     <tr><td><span class="screen-label">Settings</span></td><td>Dark mode, privacy policy, user guide, support, and app info</td></tr>
   </table>
-  <p>Within the <strong>Planner</strong> tab there are three sub-tabs:</p>
+  <p>Within the <strong>Planner</strong> tab there are three sub-tabs (the third varies by profile type):</p>
   <ul>
     <li><strong>Goal</strong> — Set your retirement target and inputs</li>
     <li><strong>Forecast</strong> — Monte Carlo simulation <span class="badge pro">Pro</span></li>
-    <li><strong>Retirement</strong> — Drawdown calculator <span class="badge pro">Pro</span></li>
+    <li><strong>Retirement</strong> — Drawdown calculator for adult profiles <span class="badge pro">Pro</span></li>
+    <li><strong>Spending</strong> — Education fund drawdown plan for child profiles</li>
   </ul>
 
   <!-- HOLDINGS -->
@@ -559,16 +561,39 @@
   <div class="warning"><p>⚠️ Always wait for the screen to finish loading before tapping another profile. Rapid switching during a price refresh may cause a brief delay.</p></div>
 
   <h2 id="child-profile">Child Profiles</h2>
-  <p>Child profiles work slightly differently from adult profiles:</p>
+  <p>Child profiles are designed for planning an education fund or long-term gift for a child. They work differently from adult profiles in several ways:</p>
   <ul>
-    <li>The Plan tab shows <strong>Investment Goal</strong> instead of Retirement Goal</li>
-    <li>The time horizon goes up to 60 years (for long-term education or wealth transfer goals)</li>
-    <li>The <strong>Drawdown tab is hidden</strong> — it's not applicable for children. The tab switches back to Goal automatically when you select a child profile.</li>
+    <li>The Planner tab shows <strong>Investment Goal</strong> instead of Retirement Goal</li>
+    <li><strong>Age slider maximum: 21 years old</strong> — suitable from newborn to young adult</li>
+    <li><strong>Years-to-goal slider maximum: 21 years</strong> — matching the typical horizon to adulthood</li>
+    <li><strong>Default settings: age 1, goal $100,000 (SGD), 20-year horizon</strong> — ready to go for a newborn</li>
     <li>The goal is labelled "Target at age X" instead of "Retire at X"</li>
-    <li>The <strong>in-retirement income (4% rule) box is hidden</strong> — spending-in-retirement estimates aren't relevant for a child's goal</li>
-    <li>Sliders have <strong>flexible ranges</strong> with no enforced minimum age — suitable for newborns through teenagers</li>
-    <li>Default goal is $100,000 over 20 years — suitable for an education fund</li>
+    <li>The <strong>Drawdown tab is replaced by a "Spending" tab</strong> — configure how the fund will be used (e.g. university over 4 years). The tab switches automatically when you select a child or adult profile.</li>
+    <li>The <strong>in-retirement income box and DCA boost block are hidden</strong> — retirement-specific projections don't apply to a child's education fund</li>
+    <li>The <strong>semi-retirement toggle is hidden</strong></li>
   </ul>
+
+  <h3>Spending Tab (Child Profiles)</h3>
+  <p>The Spending tab lets you model how the accumulated fund will be drawn down once the target age is reached:</p>
+  <ul>
+    <li><strong>Fund Purpose</strong> — label what the money is for (e.g. "University", "House deposit")</li>
+    <li><strong>Duration</strong> — how many years the fund will be spent over (1–10 years)</li>
+    <li>The app calculates the <strong>annual and monthly withdrawal</strong> amounts automatically</li>
+    <li>A chart shows the portfolio declining from the target age through the end of the spending period</li>
+  </ul>
+
+  <h2 id="graduate-adult">Converting a Child to an Adult Profile 🎓</h2>
+  <p>When a child grows up, you can graduate them to a full adult profile — keeping all their accumulated assets, holdings, and savings, while unlocking retirement planning tools.</p>
+  <div class="step"><span class="step-num">1</span>Long-press the child's name chip in the profile bar (or tap it if it's already active), and tap <strong>✎ edit</strong> in the overview.</div>
+  <div class="step"><span class="step-num">2</span>In the <strong>Rename Profile</strong> sheet, tap the blue <strong>🎓 Graduate to Adult</strong> button.</div>
+  <div class="step"><span class="step-num">3</span>Confirm the conversion. The profile is instantly upgraded to adult — all holdings, assets, liabilities, and saved investments are preserved.</div>
+  <p>After graduating:</p>
+  <ul>
+    <li>The Drawdown tab replaces the Spending tab in the Planner</li>
+    <li>Semi-retirement planning, 4% rule income projection, and all Pro retirement features become available</li>
+    <li>Existing investments and assets transfer automatically — no re-entry needed</li>
+  </ul>
+  <div class="tip"><p>💡 Graduation is permanent and cannot be undone through the app. If you need to revert, delete and recreate the profile as a child.</p></div>
 
   <!-- SETTINGS -->
   <h2 id="settings">Settings Screen</h2>
@@ -593,13 +618,11 @@
 
   <h3>Pricing</h3>
   <table>
-    <tr><th>Plan</th><th>Monthly</th><th>Annual (save 40%)</th><th>Lifetime</th></tr>
-    <tr><td>Solo (1 person)</td><td>$9.99/mo</td><td>$5.99/mo ($71.88/yr)</td><td>$299</td></tr>
-    <tr><td>Family 2</td><td>$15.99/mo</td><td>$9.59/mo ($115.08/yr)</td><td>$499</td></tr>
-    <tr><td>Family 3</td><td>$21.99/mo</td><td>$13.19/mo ($158.28/yr)</td><td>$599</td></tr>
-    <tr><td>Family 4+</td><td>$26.99/mo</td><td>$16.19/mo ($194.28/yr)</td><td>$749</td></tr>
+    <tr><th>Plan</th><th>Monthly</th><th>Annual</th><th>Lifetime</th></tr>
+    <tr><td><strong>Pro</strong> — 1 person, cloud sync</td><td>$12.99/mo</td><td>$95.88/yr ($7.99/mo)</td><td>$299.99</td></tr>
+    <tr><td><strong>Family</strong> — up to 6 profiles, all features</td><td>$21.99/mo</td><td>$155.88/yr ($12.99/mo) · includes 7-day free trial</td><td>$449.99</td></tr>
   </table>
-  <p>The paywall lets you select Solo or Family, pick the number of members, and choose monthly, annual, or lifetime billing. The annual plan saves 40%. The lifetime plan is a one-time payment — yours forever.</p>
+  <p>Choose <strong>Pro</strong> for a single user or <strong>Family</strong> for up to 6 profiles on one subscription. Annual plans save approximately 40% over monthly. The lifetime plan is a one-time payment — yours forever with no recurring fees.</p>
 
   <h3>Restoring purchases</h3>
   <p>If you reinstall the app or switch phones, tap <strong>Restore purchases</strong> at the bottom of the paywall to recover your Pro access.</p>
