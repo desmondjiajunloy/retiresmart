@@ -64,7 +64,7 @@
 
 <nav class="sidebar">
   <div class="brand">RetireSmart</div>
-  <div class="version">Complete User Guide · v1.7</div>
+  <div class="version">Complete User Guide · v1.8</div>
   <h2>Getting Started</h2>
   <a href="#overview">App Overview</a>
   <a href="#onboarding">First Launch</a>
@@ -95,10 +95,11 @@
   <a href="#switching">Switching Profiles</a>
   <a href="#child-profile">Child Profiles</a>
   <a href="#graduate-adult">Graduate to Adult</a>
-  <h2>Settings & Account</h2>
+  <h2>Settings &amp; Account</h2>
   <a href="#settings">Settings Screen</a>
   <a href="#theme">Dark / Light Mode</a>
   <a href="#upgrade">Pro Plan</a>
+  <a href="#delete-account">Delete Account</a>
   <h2>Troubleshooting</h2>
   <a href="#faq">Common Questions</a>
 </nav>
@@ -110,14 +111,14 @@
 
   <!-- OVERVIEW -->
   <h2 id="overview">App Overview</h2>
-  <p>RetireSmart is a personal finance and retirement planning app that lives entirely on your device. It does four things:</p>
+  <p>RetireSmart is a personal finance and retirement planning app. It does four things:</p>
   <ol>
     <li><strong>Tracks your investment portfolio</strong> — stocks, ETFs, real estate, cash, pensions, and more, all with live prices</li>
     <li><strong>Models your retirement</strong> — goal planner, Monte Carlo simulation, and drawdown analysis</li>
     <li><strong>Manages your full balance sheet</strong> — assets minus liabilities = your true net worth</li>
     <li><strong>Supports your whole family</strong> — separate profiles for every family member, each with their own plan</li>
   </ol>
-  <div class="tip"><p>💡 All your data — main profile and every family member profile — is securely stored in the cloud (Supabase). Everything syncs automatically across reinstalls and devices when you sign in with the same account. Your data is never sold or shared with third parties.</p></div>
+  <div class="tip"><p>💡 All your data — main profile and every family member profile — is securely synced to the cloud (Supabase). Everything restores automatically when you sign in on a new device or after reinstalling. Your data is never sold or shared with third parties.</p></div>
 
   <h3>Free vs Pro</h3>
   <table>
@@ -135,9 +136,9 @@
 
   <!-- FIRST LAUNCH -->
   <h2 id="onboarding">First Launch &amp; Sign In</h2>
-  <p>When you first open RetireSmart, you'll see an onboarding walkthrough explaining the key features. After that, you'll be asked to sign in.</p>
+  <p>When you first open RetireSmart, you'll see an onboarding walkthrough explaining the key features. After that, you'll be asked to create an account or sign in.</p>
   <div class="step"><span class="step-num">1</span><strong>Set your goal (optional)</strong> — Enter your retirement target amount and how many years you have. You can skip this and set it later in the Planner tab.</div>
-  <div class="step"><span class="step-num">2</span><strong>Sign in</strong> — Enter your name and email address. No password required. RetireSmart uses a simple local sign-in; your credentials stay on your device.</div>
+  <div class="step"><span class="step-num">2</span><strong>Create an account</strong> — Enter your name (optional), email address, and a password (6+ characters). You can also sign in with Google. Your account syncs your data to the cloud — all your holdings, plans, and family profiles are automatically restored on any device you sign into.</div>
   <div class="step"><span class="step-num">3</span><strong>Holdings Tab opens</strong> — You'll land on the Portfolio screen with three starter holdings: <strong>SPY</strong> (S&amp;P 500 ETF), <strong>AAPL</strong> (Apple), and <strong>GOOGL</strong> (Alphabet). The SPY edit sheet opens automatically — enter how many shares you own and tap Save. Do the same for AAPL and GOOGL, or delete them if you don't own them.</div>
   <div class="step"><span class="step-num">4</span><strong>Add more holdings</strong> — Free users can track up to 3 holdings total. The <strong>+ Add Holding</strong> button shows how many free slots remain (e.g. "0 of 3 free slots remaining"). Upgrade to Pro for unlimited holdings.</div>
 
@@ -148,7 +149,7 @@
     <tr><th>Tab</th><th>What it does</th></tr>
     <tr><td><span class="screen-label">Portfolio</span></td><td>Your investment holdings, other assets, liabilities, shared household, and net worth balance sheet</td></tr>
     <tr><td><span class="screen-label">Planner</span></td><td>Retirement goal, Monte Carlo forecast, drawdown analysis, and net worth history graph</td></tr>
-    <tr><td><span class="screen-label">Settings</span></td><td>Dark mode, privacy policy, user guide, support, and app info</td></tr>
+    <tr><td><span class="screen-label">Settings</span></td><td>Dark mode, privacy policy, terms of service, user guide, support, and account management</td></tr>
   </table>
   <p>Within the <strong>Planner</strong> tab there are three sub-tabs (the third varies by profile type):</p>
   <ul>
@@ -192,7 +193,7 @@
   <div class="step"><span class="step-num">5</span>Review the extracted holdings, remove any incorrect ones, then tap <strong>Add X Holdings</strong> to confirm.</div>
 
   <div class="tip"><p>💡 Works best with clean, high-resolution screenshots. Make sure the ticker symbols are clearly visible. Supported brokers include Interactive Brokers, Tiger Brokers, Moomoo, TD Ameritrade, and most others.</p></div>
-  <div class="warning"><p>⚠️ The AI import uses Google Gemini Vision. It reads ticker symbols and share counts but does NOT import prices — prices are always fetched live from Yahoo Finance.</p></div>
+  <div class="warning"><p>⚠️ The AI import uses Google Gemini Vision. It reads ticker symbols and share counts but does NOT import prices — prices are always fetched live from Yahoo Finance. Screenshots are not stored after processing.</p></div>
 
   <!-- BATCH CSV IMPORT -->
   <h2 id="batch-import">Batch Import via CSV Paste <span class="badge pro">Pro</span></h2>
@@ -601,12 +602,15 @@
   <ul>
     <li><strong>Subscription status</strong> — shows Free or Pro, with an Upgrade button for free users</li>
     <li><strong>Dark Mode toggle</strong> — switch between light and dark themes</li>
+    <li><strong>Base Currency</strong> — change the currency all values are displayed in</li>
     <li><strong>User Guide</strong> — opens this guide in your browser</li>
     <li><strong>Privacy Policy</strong> — opens in your browser</li>
+    <li><strong>Terms of Service</strong> — opens in your browser</li>
     <li><strong>Financial Disclaimer</strong> — shown inline below the legal section</li>
     <li><strong>Contact Support</strong> — opens your email app</li>
-    <li><strong>Rate on Google Play / App Store</strong> — leave a review (shows the appropriate store for your device)</li>
+    <li><strong>Rate on Google Play</strong> — leave a review</li>
     <li><strong>App version &amp; package name</strong></li>
+    <li><strong>Delete Account</strong> — permanently deletes your account and all data (see below)</li>
   </ul>
 
   <h2 id="theme">Dark / Light Mode</h2>
@@ -627,6 +631,16 @@
   <h3>Restoring purchases</h3>
   <p>If you reinstall the app or switch phones, tap <strong>Restore purchases</strong> at the bottom of the paywall to recover your Pro access.</p>
 
+  <!-- DELETE ACCOUNT -->
+  <h2 id="delete-account">Deleting Your Account</h2>
+  <p>You can permanently delete your account and all associated data directly in the app:</p>
+  <div class="step"><span class="step-num">1</span>Go to <strong>Settings</strong> (gear icon at the top right).</div>
+  <div class="step"><span class="step-num">2</span>Scroll to the <strong>Account</strong> section at the bottom.</div>
+  <div class="step"><span class="step-num">3</span>Tap <strong>Delete Account</strong> (shown in red).</div>
+  <div class="step"><span class="step-num">4</span>Tap <strong>Delete Forever</strong> to confirm.</div>
+  <p>This immediately and permanently deletes your account from our authentication system and removes all your data — holdings, plans, goals, assets, liabilities, and family profiles — from our database. This action cannot be undone.</p>
+  <div class="warning"><p>⚠️ Account deletion is immediate and irreversible. Make sure you have exported any data you need (via PDF export) before deleting.</p></div>
+
   <!-- FAQ -->
   <h2 id="faq">Common Questions</h2>
 
@@ -646,7 +660,7 @@
   <p>Yes — your data is available offline. Your main profile syncs to the cloud, so the last-saved state is always accessible. Prices won't refresh until you reconnect, but your last-known prices remain displayed.</p>
 
   <h3>How do I delete my account?</h3>
-  <p>Your main profile data (holdings, plan, assets) is stored in our secure cloud database. To delete your account and all associated data, email <a href="mailto:thefinancesanctuary@gmail.com">thefinancesanctuary@gmail.com</a> with the subject "Account Deletion Request" and we will permanently remove your data within 30 days. You can sign out at any time via <strong>Portfolio → Sign out</strong>.</p>
+  <p>Go to <strong>Settings → Account → Delete Account</strong>. This permanently removes your account and all data immediately. See the <a href="#delete-account">Delete Account</a> section above for full details.</p>
 
   <h3>I switched to a new phone — how do I transfer my data?</h3>
   <p>Everything is stored in the cloud. Simply install RetireSmart on your new phone, sign in with the same account, and all your data — main profile, family members, and child profiles — restores automatically. No export or manual re-entry needed.</p>
@@ -658,18 +672,20 @@
   <p>Yes — use the <strong>Batch CSV Import</strong> feature. Tap the 📷 camera icon → <strong>Paste list</strong>, then type or paste your holdings in <code>TICKER,SHARES</code> format (one per line). This is the fastest way to import if you already have a list of your positions.</p>
 
   <h3>The "Upgrade to Pro" button isn't working</h3>
-  <p>RevenueCat (the payment system) requires a production build to process real payments — it won't work in development/Expo Go mode. Once the app is published on the App Store or Google Play, purchases will work correctly.</p>
+  <p>RevenueCat (the payment system) requires a production build to process real payments — it won't work in development/Expo Go mode. Once the app is published on Google Play, purchases will work correctly.</p>
 
   <h3>How do I cancel my subscription?</h3>
-  <p>Subscriptions are managed by Google Play or the Apple App Store. To cancel:</p>
+  <p>Subscriptions are managed by Google Play. To cancel:</p>
   <ul>
     <li><strong>Android</strong>: Google Play Store → Menu → Subscriptions → RetireSmart → Cancel</li>
-    <li><strong>iOS</strong>: Settings → Apple ID → Subscriptions → RetireSmart → Cancel</li>
   </ul>
+
+  <h3>I forgot my password — how do I reset it?</h3>
+  <p>On the sign-in screen, tap <strong>Sign In</strong>, enter your email, then tap <strong>Forgot password?</strong> if available, or contact support at <a href="mailto:thefinancesanctuary@gmail.com">thefinancesanctuary@gmail.com</a> and we'll send you a reset link.</p>
 
   <div style="margin-top: 60px; padding-top: 24px; border-top: 1px solid #e5e5ea;">
     <p style="color: #8e8e93; font-size: 13px;">RetireSmart User Guide · For support, email <a href="mailto:thefinancesanctuary@gmail.com" style="color: #0bc887;">thefinancesanctuary@gmail.com</a></p>
-    <p style="color: #8e8e93; font-size: 12px; margin-top: 4px;">This guide is for educational purposes. RetireSmart does not provide financial advice.</p>
+    <p style="color: #8e8e93; font-size: 12px; margin-top: 4px;">This guide is for educational purposes. RetireSmart does not provide financial advice. · <a href="https://thefinancesanctuary.github.io/retiresmart/privacy-policy.html" style="color: #0bc887;">Privacy Policy</a> · <a href="https://thefinancesanctuary.github.io/retiresmart/terms-of-service.html" style="color: #0bc887;">Terms of Service</a></p>
   </div>
 
 </div>
